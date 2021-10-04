@@ -68,11 +68,11 @@ class AddMovie extends React.Component {
 
         return (
 
-            <div>
+            <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center" }}>
 
-                Movie Name <input type="text" value={this.state.movie_name} onChange={(event) => this.setState({ movie_name: event.target.value })} /> <br /><br />
+              <b>  Movie Name</b> <input style={{width:"200px"}} type="text" value={this.state.movie_name} onChange={(event) => this.setState({ movie_name: event.target.value })} /> <br /><br />
 
-                Language <select name="language_type"  onChange={(event) => this.setState({ language_type: event.target.value })}>
+              <b>  Language </b><select style={{width:"200px"}} name="language_type"  onChange={(event) => this.setState({ language_type: event.target.value })}>
 
                     {
                         languageType.map(res => (
@@ -82,7 +82,7 @@ class AddMovie extends React.Component {
 
                 </select>{this.state.language_type}<br /><br />
 
-                Catagory <select name="catagory"  onChange={(event) => this.setState({ catagory: event.target.value })}>
+                <b>   Catagory </b><select style={{width:"200px"}} name="catagory"  onChange={(event) => this.setState({ catagory: event.target.value })}>
 
                     {
                         movieType.map(res => (
@@ -94,10 +94,10 @@ class AddMovie extends React.Component {
 
 
 
-                Duration <input type="text" value={this.state.duration} onChange={(event) => this.setState({ duration: event.target.value })} /><br /><br />
-                Total Seats <input type="text" value={this.state.total_seat} onChange={(event) => this.setState({ total_seat: event.target.value })} /><br /><br />
-                Remaining Seats <input type="text" value={this.state.remaining_seat} onChange={(event) => this.setState({ remaining_seat: event.target.value })} /><br /><br />
-                Screen <input type="text" value={this.state.screen} onChange={(event) => this.setState({ screen: event.target.value })} /><br /><br />
+                <b> Duration</b> <input style={{width:"200px"}} type="text" value={this.state.duration} onChange={(event) => this.setState({ duration: event.target.value })} /><br /><br />
+                <b>  Total Seats</b> <input style={{width:"200px"}} type="text" value={this.state.total_seat} onChange={(event) => this.setState({ total_seat: event.target.value })} /><br /><br />
+                <b>  Remaining Seats</b> <input style={{width:"200px"}} type="text" value={this.state.remaining_seat} onChange={(event) => this.setState({ remaining_seat: event.target.value })} /><br /><br />
+                <b> Screen </b><input style={{width:"200px"}} type="text" value={this.state.screen} onChange={(event) => this.setState({ screen: event.target.value })} /><br /><br />
                 
                 
                 {

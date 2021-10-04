@@ -10,7 +10,7 @@ import { addReservation, editReservation, updateReservation } from "../../redux/
 import { getshowtime } from "../../redux/action/action.show";
 import { getStatus } from "../../redux/action/action.status";
 import {Button} from 'react-bootstrap'
-import image1 from '../images/movie.jpg'
+import image1 from '../images/image2.jpg'
 
 
 
@@ -73,13 +73,13 @@ class AddReservation extends React.Component {
 
         return (
 
-            <div style={{backgroundImage:`url(${image1})`,width:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center" }}>
+            <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center" }}>
 
-                Cus id <input style={{width:"200px"}} type="text" value={this.state.cus_id} onChange={(event) => this.setState({ cus_id: event.target.value })} /> <br /><br />
+               <b> Cus id </b> <input style={{width:"200px"}} type="text" value={this.state.cus_id} onChange={(event) => this.setState({ cus_id: event.target.value })} /> <br /><br />
 
 
 
-                Mov id <select name="mov_id" value={this.state.mov_id} onChange={(event) => this.setState({ mov_id: event.target.value })}>
+               <b> Mov id</b> <select style={{width:"200px"}} name="mov_id" value={this.state.mov_id} onChange={(event) => this.setState({ mov_id: event.target.value })}>
 
                     {
                         movieId.map(res => (
@@ -93,12 +93,12 @@ class AddReservation extends React.Component {
 
 
 
-                Booked Seats <input type="text" value={this.state.booked_seats} onChange={(event) => this.setState({ booked_seats: event.target.value })} /><br /><br />
-                Movie Date <input type="Date" value={this.state.mov_date} onChange={(event) => this.setState({ mov_date: event.target.value })} />{this.state.mov_date}<br /><br />
+                <b> Booked Seats</b> <input style={{width:"200px"}} type="text" value={this.state.booked_seats} onChange={(event) => this.setState({ booked_seats: event.target.value })} /><br /><br />
+                <b>  Movie Date</b> <input style={{width:"200px"}} type="Date" value={this.state.mov_date} onChange={(event) => this.setState({ mov_date: event.target.value })} />{this.state.mov_date}<br /><br />
 
 
 
-                Status<select name="book_status" value={this.state.book_status} onChange={(event) => this.setState({ book_status: event.target.value })}>
+                <b> Status</b><select style={{width:"200px"}} name="book_status" value={this.state.book_status} onChange={(event) => this.setState({ book_status: event.target.value })}>
 
                     {
                         bookStatus.map(res => (
@@ -109,7 +109,7 @@ class AddReservation extends React.Component {
                 </select>{this.state.book_status}<br /><br />
 
 
-                Show Time <select name="show_time" value={this.state.show_time} onChange={(event) => this.setState({ show_time: event.target.value })}>
+                <b> Show Time</b> <select style={{width:"200px"}} name="show_time" value={this.state.show_time} onChange={(event) => this.setState({ show_time: event.target.value })}>
 
                     {
                         showTime.map(res => (
@@ -120,8 +120,8 @@ class AddReservation extends React.Component {
                 </select>{this.state.show_time}<br /><br />
 
 
-                res_id <input type="text" value={this.state.res_id} onChange={(event) => this.setState({ res_id: event.target.value })} /><br /><br />
-                No.of.Booking <input type="text" value={this.state.no_of_booking} onChange={(event) => this.setState({ no_of_booking: event.target.value })} /><br /><br />
+                <b>   res_id</b> <input style={{width:"200px"}} type="text" value={this.state.res_id} onChange={(event) => this.setState({ res_id: event.target.value })} /><br /><br />
+                <b> No.of.Booking</b> <input style={{width:"200px"}} type="text" value={this.state.no_of_booking} onChange={(event) => this.setState({ no_of_booking: event.target.value })} /><br /><br />
 
 
                 {

@@ -54,13 +54,13 @@ class AddCustomer extends React.Component {
 
         return (
 
-            <div>
+            <div style={{ display:"flex", flexDirection:"column", justifyContent:"center",alignItems:"center" }}>
 
     
 
-                cus_id <input type="text" value={this.state.cus_id} onChange={(event) => this.setState({ cus_id: event.target.value })} />{this.state.cus_id} <br /><br />
-                Customer Name <input type="text" value={this.state.name} onChange={(event) => this.setState({ name: event.target.value })} />{this.state.name} <br /><br />
-                Contact <input type="text" value={this.state.phone} onChange={(event) => this.setState({ phone: event.target.value })} />{this.state.phone}<br /><br />
+                <b>cus_id</b> <input style={{width:"200px"}} type="text" value={this.state.cus_id} onChange={(event) => this.setState({ cus_id: event.target.value })} />{this.state.cus_id} <br /><br />
+                <b> Customer Name</b> <input style={{width:"200px"}} type="text" value={this.state.name} onChange={(event) => this.setState({ name: event.target.value })} />{this.state.name} <br /><br />
+                <b> Contact</b> <input style={{width:"200px"}} type="text" value={this.state.phone} onChange={(event) => this.setState({ phone: event.target.value })} />{this.state.phone}<br /><br />
                 {
 
                     editData.cus_id ? <button onClick={this.editData}>Update</button> : <Button variant="dark" onClick={this.saveData}>SAVE</Button>
