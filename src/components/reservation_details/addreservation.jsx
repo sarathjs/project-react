@@ -9,6 +9,8 @@ import { getMovie } from "../../redux/action/action.movie";
 import { addReservation, editReservation, updateReservation } from "../../redux/action/action.reservation";
 import { getshowtime } from "../../redux/action/action.show";
 import { getStatus } from "../../redux/action/action.status";
+import {Button} from 'react-bootstrap'
+import image1 from '../images/movie.jpg'
 
 
 
@@ -71,9 +73,9 @@ class AddReservation extends React.Component {
 
         return (
 
-            <div>
+            <div style={{backgroundImage:`url(${image1})`,width:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center" }}>
 
-                Cus id <input type="text" value={this.state.cus_id} onChange={(event) => this.setState({ cus_id: event.target.value })} /> <br /><br />
+                Cus id <input style={{width:"200px"}} type="text" value={this.state.cus_id} onChange={(event) => this.setState({ cus_id: event.target.value })} /> <br /><br />
 
 
 
@@ -124,7 +126,7 @@ class AddReservation extends React.Component {
 
                 {
 
-                    editData.res_id ? <button onClick={this.editData}>Update</button> : <button onClick={this.saveData}>save</button>
+                    editData.res_id ? <button onClick={this.editData}>Update</button> : <Button variant="dark" onClick={this.saveData}>SAVE</Button>
 
                 }
 

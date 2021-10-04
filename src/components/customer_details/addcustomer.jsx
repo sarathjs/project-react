@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 import { bindActionCreators } from 'redux'
 import { addCustomer, editCustomer, updateCustomer } from "../../redux/action/action.customer";
-
+import {Button} from 'react-bootstrap'
 
 
 
@@ -63,7 +63,7 @@ class AddCustomer extends React.Component {
                 Contact <input type="text" value={this.state.phone} onChange={(event) => this.setState({ phone: event.target.value })} />{this.state.phone}<br /><br />
                 {
 
-                    editData.cus_id ? <button onClick={this.editData}>Update</button> : <button onClick={this.saveData}>save</button>
+                    editData.cus_id ? <button onClick={this.editData}>Update</button> : <Button variant="dark" onClick={this.saveData}>SAVE</Button>
 
                 }<br /><br /><br /><br />
 

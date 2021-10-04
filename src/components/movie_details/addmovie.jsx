@@ -7,7 +7,7 @@ import { getCatagory } from "../../redux/action/action.catagory";
 import { getLanguage } from "../../redux/action/action.language";
 
 import { addMovie, editMovie, updateMovie } from "../../redux/action/action.movie";
-
+import {Button} from 'react-bootstrap'
 
 
 
@@ -102,7 +102,7 @@ class AddMovie extends React.Component {
                 
                 {
 
-editData.mov_id ? <button onClick={this.editData}>Update</button> : <button onClick={this.saveData}>save</button>
+editData.mov_id ? <button onClick={this.editData}>Update</button> : <Button variant="dark" onClick={this.saveData}>SAVE</Button>
 
 }
 
